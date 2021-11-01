@@ -1,0 +1,163 @@
+/* ------variables---------- */
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary: #4c84ff;
+  --dark: #000000;
+  --textPrimary: rgba(255, 255, 255, 0.919);
+  --textSecondary: rgb(238, 220, 220);
+}
+
+/* ---------resetdefault--------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* --------utility classes -------------- */
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.item-center {
+  align-items: center;
+}
+
+/* -------custom styles--------------- */
+.container {
+  max-width: 700px;
+  margin: 0 1rem;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.213), rgba(0, 0, 0, 0.227)),
+    url(../images/homepage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.social-navs {
+  position: fixed;
+  color: white;
+  right: 50%;
+  top: 10px;
+  z-index: 10;
+}
+
+.social-navs ul li {
+  list-style-type: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.social-navs ul {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  transform: rotate(90deg);
+  position: fixed;
+  top: 50%;
+  right: -10rem;
+}
+
+.navbar a {
+  color: var(--textPrimary);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+
+.navbar a:hover {
+  opacity: 90%;
+}
+
+.active {
+  color: var(--primary);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  border: 1px solid var(--primary);
+}
+
+.home-section {
+  color: white;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  max-width: 35%;
+}
+
+.hello-text {
+  background: var(--primary);
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.name {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px 0;
+  font-size: 36px;
+}
+
+.name span {
+  color: var(--primary);
+}
+
+.work {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 21px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.portfolio-btn {
+  padding: 10px 25px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--textPrimary);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.portfolio-btn span {
+  margin-left: 10px;
+}
+
+.portfolio-btn:hover {
+  opacity: 90%;
+}
