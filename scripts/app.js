@@ -1,3 +1,30 @@
+// Typing effect function
+const texts = [
+  "FULL STACK WEB DEVELOPMENT",
+  "MOBILE APP DEVELOPMENT",
+  "MERN STACK DEVELOPMENT",
+];
+let index = 0;
+let count = 0;
+let currentText;
+let letter;
+
+(function type() {
+  if (count === texts.length) {
+    count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+  document.querySelector("#typing").textContent = letter;
+  if (currentText.length === letter.length) {
+    count++;
+    index = 0;
+  }
+  setTimeout(type, 150);
+})();
+
+// particle function
+
 particlesJS("particles-js", {
   particles: {
     number: {
