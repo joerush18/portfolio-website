@@ -41,6 +41,10 @@ a:hover {
   align-items: center;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 /* -------custom styles--------------- */
 .container {
   max-width: 700px;
@@ -90,7 +94,7 @@ canvas {
 
 .navbar {
   transform: rotate(90deg);
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: -10rem;
 }
@@ -98,24 +102,24 @@ canvas {
 .navbar a {
   color: var(--textPrimary);
   font-weight: bold;
-  font-size: 1rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
 }
 
 .navbar a:hover {
   opacity: 90%;
+  border: 2px solid var(--primary);
 }
 
 .active {
-  color: var(--primary);
-  padding: 1rem;
-  border-radius: 0.2rem;
   border: 1px solid var(--primary);
 }
 
 .home-section {
   color: white;
-  position: fixed;
+  position: absolute;
   top: 30%;
   left: 10%;
   max-width: 35%;
@@ -171,4 +175,21 @@ canvas {
 
 .portfolio-btn:hover {
   opacity: 90%;
+}
+
+/* secondsection */
+
+.second-section {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(22, 22, 22, 0.912);
+  height: 90vh;
+  width: 88%;
+  color: var(--primary);
+}
+.education-content {
+  margin: auto;
 }
