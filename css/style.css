@@ -45,6 +45,10 @@ a:hover {
   justify-content: space-between;
 }
 
+.justify-start {
+  justify-content: start;
+}
+
 /* -------custom styles--------------- */
 .container {
   max-width: 700px;
@@ -103,7 +107,7 @@ canvas {
   color: var(--textPrimary);
   font-weight: bold;
   margin-right: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border: 2px solid transparent;
   border-radius: 0.4rem;
 }
@@ -114,7 +118,7 @@ canvas {
 }
 
 .active {
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .home-section {
@@ -183,13 +187,114 @@ canvas {
   position: absolute;
   top: 50px;
   left: 60px;
-  right: 0;
+  right: 120px;
   bottom: 0;
-  background-color: rgba(22, 22, 22, 0.912);
+  background-color: rgba(22, 22, 22, 0.96);
   height: 90vh;
-  width: 88%;
-  color: var(--primary);
+  color: var(--textPrimary);
+  border-radius: 15px;
 }
-.education-content {
-  margin: auto;
+
+.second-section-wrapper {
+  min-width: 100%;
+  height: 100%;
+  overflow-x: auto;
+}
+
+.second-section-wrapper section {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.second-section-wrapper section .title {
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  margin: 30px;
+  font-size: 25px;
+}
+
+/* line below title part */
+.second-section-wrapper section .title::after {
+  content: "";
+  position: absolute;
+  left: 42px;
+  top: 30px;
+  border-radius: 20%;
+  height: 5px;
+  width: 70px;
+  background-color: var(--primary);
+}
+
+/* education contents */
+
+.edcards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* .education-content p {
+  margin-bottom: 60px;
+} */
+
+.ed-content {
+  min-height: 200px;
+  max-width: 600px;
+  padding: 15px 15px 0 15px;
+  background-color: #1f1e1e;
+  border-radius: 20px;
+}
+
+.icon-image {
+  background-color: var(--primary);
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon-image i {
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  font-size: 15px;
+}
+
+.icon-image::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  min-height: 120px;
+  width: 2px;
+  top: 40px;
+  left: 18px;
+}
+
+.left-part {
+  text-align: left;
+  margin: 10px 20px;
+}
+
+.year {
+  background-color: var(--dark);
+  padding: 0 10px;
+  border-radius: 20px;
+  font-size: 10px;
+}
+
+.collage-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 12px;
+  text-align: start;
+  line-height: 16px;
+  color: var(--textSecondary);
 }
