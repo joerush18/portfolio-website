@@ -245,6 +245,7 @@ canvas {
   min-height: 200px;
   max-width: 600px;
   padding: 15px 15px 0 15px;
+  margin-top: 20px;
   background-color: #1f1e1e;
   border-radius: 20px;
 }
@@ -292,9 +293,82 @@ canvas {
   font-weight: bold;
 }
 
-.description {
+.ed-description {
   font-size: 12px;
   text-align: start;
   line-height: 16px;
   color: var(--textSecondary);
+}
+
+/* Projects page design */
+
+.project-content {
+  min-height: 200px;
+  min-width: 300px;
+  padding: 5px;
+  margin-top: 20px;
+  transition: transform 0.4s ease-in-out;
+  position: relative;
+}
+
+.project-content img {
+  height: 200px;
+  width: 300px;
+  object-fit: fill;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px #fcf8f8;
+}
+
+.project-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-content:hover {
+  transform: scale(1.1);
+}
+
+.project-details {
+  display: none;
+}
+
+.project-details {
+  padding: 10px;
+  background-color: var(--primary);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.working {
+  color: red;
+}
+
+.not-working {
+  color: green;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.project-description {
+  font-size: 12px;
+  margin: 10px;
+}
+
+.project-status {
+  background-color: white;
+  padding: 2px 15px;
+  font-size: 10px;
+  border-radius: 50px;
 }
